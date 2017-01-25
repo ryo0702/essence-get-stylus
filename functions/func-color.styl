@@ -1,0 +1,20 @@
+opacity(n)
+  opacity n
+  if support-for-ie
+    filter unquote('progid:DXImageTransform.Microsoft.Alpha(Opacity=' + round(n * 100) + ')')
+
+grad(array)
+  background: array[0]
+  color array[1]
+  if array[2] == "dark"
+    background: linear-gradient(array[0],lighten(array[0],10))
+  else
+    background: linear-gradient(array[0],darken(array[0],10))
+
+grad_strong(array)
+  background: array[0]
+  color array[1]
+  if array[2] == "dark"
+    background: linear-gradient(array[0],lighten(array[0],25))
+  else
+    background: linear-gradient(array[0],darken(array[0],25))

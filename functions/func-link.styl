@@ -1,0 +1,7 @@
+link(array)
+  color array[0]
+  &:hover
+    if array[2] == "dark"
+      color lighten(array[0],10)
+    else
+      color darken(array[0],10)
